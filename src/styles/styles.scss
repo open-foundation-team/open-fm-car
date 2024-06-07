@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
 
+  overflow: hidden;
+
   .information-container {
     display: flex;
     align-items: center;
@@ -18,14 +20,6 @@
     .artwork-section {
       flex: 0 0 auto;
       height: 100%;
-
-      .artwork-styled {
-        height: 100%;
-
-        img {
-          height: 100%;
-        }
-      }
     }
 
     .info-section {
@@ -53,6 +47,14 @@
         font-size: 1.5rem;
         font-weight: 100;
       }
+    }
+  }
+
+  .artwork-styled {
+    height: 100%;
+
+    img {
+      height: 100%;
     }
   }
 
