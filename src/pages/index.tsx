@@ -5,7 +5,9 @@ import { Artwork } from '../components';
 export default function Home() {
   return (
     <div className="app-container now-playing">
-      <Artwork image='/ram-album-cover.jpeg' />
+      <Artwork
+        image='/ram-album-cover.jpeg'
+      />
     </div>
   );
 }

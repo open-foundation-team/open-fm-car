@@ -1,5 +1,5 @@
-// Style imports
-//import './styles.scss';
+// Component imports
+import { Artwork } from "../../components";
 
 // now-playing page declaration
 export default function NowPlaying({
@@ -14,9 +14,9 @@ export default function NowPlaying({
 
         {/* Artwork section*/}
         <div className="artwork-section">
-          <div className="artwork-styled">
-            <img src="/ram-album-cover.jpeg" alt="Album art cover" />
-          </div>
+          <Artwork
+            image="/ram-album-cover.jpeg"
+          />
         </div>
 
         {/* Information section */}
