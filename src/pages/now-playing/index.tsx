@@ -1,3 +1,6 @@
+// Module imports
+import { useState } from "react";
+
 // Component imports
 import { Artwork, Icon } from "../../components";
 
@@ -5,6 +8,9 @@ import { Artwork, Icon } from "../../components";
 export default function NowPlaying({
 
 }) {
+
+  const [isPlaying, setPlaying] = useState(false);
+  const [isLiked, setLiked] = useState(false);
 
   return (
     <div className="app-container now-playing">
@@ -43,11 +49,17 @@ export default function NowPlaying({
 
           <Icon name="rewind" />
 
-          <Icon name="play" />
+          {isPlaying ?
+            <Icon name="pause" onClick={() => setPlaying(c => !c)} /> :
+            <Icon name="play" onClick={() => setPlaying(c => !c)} />
+          }
 
           <Icon name="fast-forward" />
 
-          <Icon name="heart" />
+          {isLiked ?
+            <Icon name="heart-filled" onClick={() => setLiked(c => !c)} /> :
+            <Icon name="heart" onClick={() => setLiked(c => !c)} />
+          }
 
         </div>
       </div>
